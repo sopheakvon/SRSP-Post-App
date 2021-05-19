@@ -8,3 +8,5 @@ app.use(express.urlencoded());
 
 // GET Method
 app.get('/', (req, res) => res.send("Welcome GET POST PUT DELETE Method"));
+
+console.log("hello");
