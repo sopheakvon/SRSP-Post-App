@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SRSP POST APP</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/app.js" defer></script>
 </head>
@@ -20,8 +21,13 @@
 
           <div class="post-comment">
             <div class="add-comment">
+              <div class="message">
+                <ul>
+                  
+                </ul>
+              </div>
               <input type="text" id="comment" placeholder="Comment.." data-emoji-picker="true"/>
-              <button id="send-comment" disabled>SEND</button>
+              <button id="send-comment">SEND</button>
             </div>
           </div>
           
