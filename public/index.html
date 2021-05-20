@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SRSP POST APP</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/app.js" defer></script>
 </head>
 <body>
   
     <div class="container">
-        
-        <div class="post">
 
-          <div class="post-img">
-            <img src="image/angkor.jpg" alt="" />
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <img src="image/angkor.jpg" alt="">
+            </div>
           </div>
 
           <div class="post-comment">
@@ -24,14 +29,26 @@
               <ul></ul>
             </div>
             
-            <div class="add-comment">
-              <input type="text" id="comments" placeholder="Comment.." data-emoji-picker="true"/>
-              <button id="send-comment">SEND</button>
-            </div>
-
-          </div>
           
+          <div class="card">
+            <div class="card-body">
+              
+              <div class="card-comment">
+              
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Comment">
+                <div class="input-group-append">
+                  <button class="btn btn-success" type="submit">Comment</button>
+                </div>
+              </div>
+            </div>
         </div>
+        </div>
+        <div class="col-3"></div>
+      </div>
     </div>
 
 </body>
