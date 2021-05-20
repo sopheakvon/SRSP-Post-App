@@ -42,8 +42,8 @@ body {
 .add-comment button {
     width: 25%;
     padding: 10px;
-    box-shadow: 1px 4px 4px rgb(78, 77, 77);
-    border-radius: 10px;
+    
+    border-radius:5px;
 }
 
 .username {
@@ -72,3 +72,7 @@ ul li {
     padding:5px 0;
     opacity: 0.8;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    }
