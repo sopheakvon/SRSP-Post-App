@@ -1,0 +1,59 @@
+body {
+    background: #eec;
+    font-family:  sans-serif;
+}
+
+.container {
+    width: 40%;
+    margin: auto;
+}
+
+.post {
+    background: #fff;
+    border-radius: 10px;
+}
+
+.post-img {
+    width: 100%;
+}
+
+.post-img img {
+    width: 100%;
+}
+
+.post-comment {
+    padding: 10px;
+}
+
+.add-comment {
+    border-top: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.add-comment input {
+    width: 60%;
+    padding: 10px;
+}
+
+.add-comment button {
+    width: 34%;
+    padding: 10px;
+    /* cursor: pointer; */
+}
+
+/* .user {
+    font-weight: bolder;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+}
+ul li {
+    padding:5px 0;
+    opacity: 0.8;
+} */
