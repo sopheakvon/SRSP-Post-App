@@ -8,4 +8,4 @@ app.use(express.urlencoded());
 app.use(express.static('public'));
 
 // GET Method
-app.get('/', (req, res) => res.send("Hello Project"));
+app.get('/', (req, res) => res.send("Welcome GET POST PUT DELETE Method"));
