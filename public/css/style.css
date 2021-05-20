@@ -45,3 +45,30 @@ body {
     box-shadow: 1px 4px 4px rgb(78, 77, 77);
     border-radius: 10px;
 }
+
+.username {
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.username input {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.user {
+    font-weight: bolder;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+ul li {
+    padding:5px 0;
+    opacity: 0.8;
+}

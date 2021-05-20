@@ -1,66 +1,48 @@
-let requestComment = (response) => {
-    let comments = response.data;
-    const commentArea = document.querySelector('.comment');
-    const listComment = document.querySelector('ul');
-    if (listComment !== null) {
-        listComment.remove();
-     }
-    const newListComment = document.createElement('ul');
-    for (let comment of comments) {
-        const singleComment = document.createElement('li');
-        const user = document.createElement('span');
-        const comm = document.createElement('span');
-        user.classList.add('user');
-        comm.classList.add('comm');
-        user.textContent = "@" + comment.username + ": ";
-        comm.textContent = comment.comment;
-        singleComment.appendChild(user);
-        singleComment.appendChild(comm);
-        newListComment.appendChild(singleComment)
-        commentArea.appendChild(newListComment)
+function displayUser(response){
+    // console.log(response.data);
+    let users = response.data;
+    let userList = document.querySelector('.user-list');
+    let ul = document.querySelector('ul');
+    if (ul !== null){
+        ul.remove();
+    }
+
+    const newUl = document.createElement('ul');
+    for (let user of users) {
+        const li = document.createElement('li');
+        li.textContent = user.id + " " +user.username + " " + user.password;
+        newUl.appendChild(li);
+        userList.appendChild(newUl);
     }
 }
 
+function save(event) {
+    const username = document.querySelector('#username');
+    const password = document.querySelector('#password');
 
-let loadComment = () => {
-    const url = "https://nodedy.herokuapp.com/post";
-    axios.get(url).then(requestComment);
+    let user = {username: username,  password: password};
+    const url ="http://localhost:5000/api/users";
+    axios
+    .post(url, user)
+    .then(displayUser);
+}
+
+// function loadData() {
+//     const url="http://localhost:5000/api/users";
+//     axios
+//     .get(url)
+//     .then(displayUser)
+// }
+
+
+function deleteUser () {
+
+}
+
+function updateUser () {
     
 }
+const saveUser = document.querySelector('#save');
+saveUser.addEventListener('click', save);
 
-
-let sendComment = (event) => {
-    const username = document.querySelector('#username').value;
-    const comment = document.querySelector('#comment').value;
-    let newComment = {
-        username: username,
-        comment: comment
-    }
-    const url = "https://nodedy.herokuapp.com/post";
-    axios.post(url, newComment).then(requestComment);
-}
-
-let enableButton = () => {
-    btnSend.removeAttribute('disabled', '')
-}
-let disableButton = () => {
-    btnSend.setAttribute('disabled', '')
-}
-
-document.addEventListener('keyup', () => {
-    const username = document.querySelector('#username').value;
-    const comment = document.querySelector('#comment').value;
-    if (username !== "" && comment !== "") {
-        enableButton()
-    } else {
-        disableButton();
-    }
-});
-const btnSend = document.querySelector('#send-comment');
-btnSend.addEventListener('click', sendComment);
-
-// emoji
-new EmojiPicker();
-
-
-setInterval(loadComment, 5000);
+// loadData();
