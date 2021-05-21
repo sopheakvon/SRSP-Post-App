@@ -16,9 +16,6 @@ let comments  = [
 
 // GET Method
 app.get('/comments', (req, res) =>{
-    //
-    // let newItem = req.body
-    // comments.push(newItem);
     res.send(comments)
 });
 app.post('/comments', (req, res) =>{

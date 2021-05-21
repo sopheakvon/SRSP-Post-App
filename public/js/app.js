@@ -1,11 +1,15 @@
 function displayComment (response){
     let comments = response.data;
+    let removemessage = document.querySelectorAll('.alert');
     
+    for(let message of removemessage){
+        
+        message.remove();
+    }
 
     for(let comment of comments){
-        
-
         const sms = document.createElement('div');
+        // console.log(sms);
         sms.classList.add('alert');
         sms.classList.add('alert-info');
 
