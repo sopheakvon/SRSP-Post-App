@@ -6,3 +6,14 @@ body {
 img {
     width: 100%;
 }
+#bolder, #italic, #underline{
+    font-weight: bolder;
+    cursor: pointer;
+}
+#italic{
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+#underline{
+    text-decoration: underline;
+}
