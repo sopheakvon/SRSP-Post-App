@@ -1,8 +1,9 @@
 function displayComment (response){
     let comments = response.data;
-    const ul = document.querySelector('ul');
+    
 
     for(let comment of comments){
+        
 
         const sms = document.createElement('div');
         sms.classList.add('alert');
@@ -20,20 +21,26 @@ function displayComment (response){
     }
 }
 
-function save(event){
-    const item = document.querySelector('.form-control').value;
-    // let newItem = {username: parseInt(id), message: item};
+function sendMessage (){
+    
+    const messages = document.querySelector('#comment').value;
+    let messageBody = {
+        username: "Unknown", message: messages
+    };
+    console.log(messageBody);
     const url ="http://localhost:5000/comments";
     axios
-    // .get(url, newItem)
+    .post(url,messageBody)
+    .then(displayComment)
+}
+
+function loadMessage(){
+    const url ="http://localhost:5000/comments";
+    axios
     .get(url)
     .then(displayComment)
 }
-// const url ="http://localhost:5000/comments";
-// axios
-// .get(url)
-// .then(displayComment)
-
 const btnSend = document.querySelector('button');
+btnSend.addEventListener('click',sendMessage);
 const cardComment = document.querySelector('.card-comment');
-save();
+loadMessage();
