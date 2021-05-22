@@ -18,3 +18,19 @@ img {
     text-decoration: underline;
 }
 
+.activer {
+    background: #000;
+    color : white;
+}
+.b{
+    font-weight: bolder;
+}
+.i{
+    font-style: italic;
+}
+.u{
+    text-decoration: underline;
+}
+#underline{
+    color: red;
+}
