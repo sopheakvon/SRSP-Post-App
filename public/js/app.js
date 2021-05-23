@@ -46,7 +46,7 @@ function sendMessage() {
         i: "i",
         u: ""
     };
-    const url = "http://localhost:5000/comments";
+    const url = "https://srsp-post-app.herokuapp.com/comments";
     axios
     .post(url, messageBody)
     .then(displayComment);
@@ -76,7 +76,7 @@ const btnSend = document.querySelector("#btnid");
 
 
 function loadMessage() {
-    const url = "http://localhost:5000/comments";
+    const url = "https://srsp-post-app.herokuapp.com/comments";
     axios.get(url).then(displayComment);
 };
 
