@@ -95,15 +95,15 @@ function textstyles(e){
     };
 
 
-    // if (e.target.id === "bolder" && e.target.className === "input-group-text activer") {
-    //     b = bolder.textContent.toLowerCase();
-    // }
-    // if (e.target.className === "input-group-text" && e.target.id === "bolder") {
-    //     b = "";
-    // }
-    // if (e.target.id === "italic" && e.target.className === "input-text-activer") {
-    //     i = italic.textContent.toLowerCase();
-    // }
+    if (e.target.id === "bolder" && e.target.className === "input-group-text activer") {
+        b = bolder.textContent.toLowerCase();
+    }
+    if (e.target.className === "input-group-text" && e.target.id === "bolder") {
+        b = "";
+    }
+    if (e.target.id === "italic" && e.target.className === "input-text-activer") {
+        i = italic.textContent.toLowerCase();
+    }
 
 };
 
