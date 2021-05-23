@@ -114,3 +114,18 @@ const textStyle = document.querySelector(".text-style");
 textStyle.addEventListener("click", textstyles);
 
 loadMessage();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
