@@ -43,7 +43,7 @@ function sendMessage() {
         message: messages,
         color: "alert-dark",
         b: "",
-        i: "i",
+        i: "",
         u: ""
     };
     const url = "http://localhost:5000/comments";
@@ -94,19 +94,7 @@ function textstyles(e){
         underLine.classList.toggle("activer");
     };
 
-
-    // if (e.target.id === "bolder" && e.target.className === "input-group-text activer") {
-    //     b = bolder.textContent.toLowerCase();
-    // }
-    // if (e.target.className === "input-group-text" && e.target.id === "bolder") {
-    //     b = "";
-    // }
-    // if (e.target.id === "italic" && e.target.className === "input-text-activer") {
-    //     i = italic.textContent.toLowerCase();
-    // }
-
 };
-
 
 btnSend.addEventListener("click", sendMessage);
 const cardComment = document.querySelector(".card-comment");
