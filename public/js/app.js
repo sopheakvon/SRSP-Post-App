@@ -34,9 +34,9 @@ function sendMessage() {
         username:"Unknown",
         message: messages,
         color: "alert-dark",
-        b: "",
-        i: "",
-        u: ""
+        b: font.b,
+        i: font.i,
+        u: font.u,
     };
 
     // const url = "http://localhost:5000/comments";
@@ -105,17 +105,17 @@ function textstyles(e){
     if(e.target.id === "underline" && e.target.className === "input-group-text activer"){
         u = underLine.textContent.toLowerCase();
     }
-        if(e.target.className === "input-group-text" && e.target.id === "underline"){
-            u = "";
-        }
+    if(e.target.className === "input-group-text" && e.target.id === "underline"){
+        u = "";
+    }
     
 
-
+    font = {b: b, i: i, u: u};
     
 };
 
 btnSend.addEventListener("click", sendMessage);
-
+let font = {};
 const cardComment = document.querySelector(".card-comment");
 const textStyle = document.querySelector(".text-style");
 textStyle.addEventListener("click", textstyles);
