@@ -80,6 +80,9 @@ function textstyles(e){
     const bolder = document.querySelector('#bolder');
     const italic = document.querySelector('#italic');
     const underLine = document.querySelector('#underline');
+    let i = "";
+    let u = "";
+    let b = "";
     if(e.target.id === "bolder"){
         bolder.classList.toggle("activer");
     };
