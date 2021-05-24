@@ -119,8 +119,8 @@ btnSend.addEventListener("click", sendMessage);
 const cardComment = document.querySelector(".card-comment");
 const textStyle = document.querySelector(".text-style");
 textStyle.addEventListener("click", textstyles);
+setInterval(loadMessage,1000);
 
-loadMessage();
 
 
 
