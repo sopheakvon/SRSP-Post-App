@@ -1,8 +1,7 @@
 const express = require("express");
 const app = express();
-const port = 5000;
+app.listen(process.env.PORT || 5000,() => console.log("Server running...."));
 
-app.listen(port, () => console.log("server starting ..."));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.static("public"));
@@ -27,15 +26,7 @@ let comments = [
     u: ""
     
   },
-  {
-    id: 3,
-    username: "Rady",
-    message: "Hello!! My name is Rady",
-    color: "alert-success",
-    b: "b",
-    i: "",
-    u: ""
-  },
+  
 ];
 
 // GET Method
@@ -50,7 +41,7 @@ app.post("/comments", (req, res) => {
   let bol = req.body.b;
   let ita = req.body.i;
   let under = req.body.u;
-  let message = {
+  let users = {
     id: comments.length + 1,
     username: user,
     message: sms,
@@ -59,6 +50,6 @@ app.post("/comments", (req, res) => {
     i: ita,
     u: under
   };
-  comments.push(message);
+  comments.push(users);
   res.send(comments);
 });
