@@ -31,11 +31,15 @@ function displayComment(response) {
 };
 
 function sendMessage() {
-    const messages = document.querySelector("#comment").value;
+    let messages = document.querySelector("#comment").value;
+    let user = localStorage.getItem("username");
+    let color = localStorage.getItem('color');
+
     let messageBody = {
-        username:"Unknown",
+
+        username:user,
         message: messages,
-        color: "alert-dark",
+        color: color,
         b: font.b,
         i: font.i,
         u: font.u,

@@ -53,3 +53,14 @@ app.post("/comments", (req, res) => {
   comments.push(users);
   res.send(comments);
 });
+
+let users =[
+  {id: 1, username: "sopheak", password: "123", color: "alert-warning",},
+  {id: 2, username: "Rady", password: "345",color: "alert-success"},
+  {id: 3, username: "Vanna", password: "567",color: "alert-dark"},
+  {id: 4, username: "Vanny", password: "789",color: "alert-info"}
+];
+
+app.get('/users',(req,res) =>{
+  res.send(users);
+})
