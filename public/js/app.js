@@ -1,11 +1,13 @@
-function messageModal(user, mes, color, b, i, u) {
+function messageModal(user, mes, color, B, I, U) {
     const sms = document.createElement("div");
     sms.classList.add("alert");
     sms.classList.add(color);
 
     const userName = document.createElement("strong");
     const messages = document.createElement("span");
-    
+    if (B !== "") messages.classList.add(B);
+    if (I !== "") messages.classList.add(I);
+    if (U !== "") messages.classList.add(U);
     
     userName.textContent = user + " : ";
     messages.textContent = mes;
