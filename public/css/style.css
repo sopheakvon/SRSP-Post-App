@@ -40,3 +40,49 @@ img {
 #italic{
     color: red;
 }
+/* .username{
+    text-align: center;
+    margin-left: -12px;
+    padding: 10px;
+} */
+
+
+
+
+body {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.form{
+    padding: 50px 50px;
+    box-shadow: 0 0 10px #ddd;
+    text-align: center;
+    margin-top:-70px;
+}
+
+.form .input{
+    width: 100%;
+    padding: 5px 10px;
+    border:1px solid green;
+}
+
+.form .input i {
+    line-height: 30px;
+    color: green;
+}
+.form .input input {
+    border: none;
+    outline:none;
+
+}
+.button{
+    padding: 7px 30px;
+    background: linear-gradient(45deg, green, lightgreen);
+    border: none;
+    text-align: center;
+}
+.style{
+    margin-right: 20px;
+}

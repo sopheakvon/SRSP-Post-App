@@ -37,16 +37,18 @@ function displayComment(response) {
 };
 
 function sendMessage() {
+    const username = document.querySelector('#username').value;
     const messages = document.querySelector("#comment").value;
     let messageBody = {
-        username: "Unknown",
+        username: username,
         message: messages,
         color: "alert-dark",
         b: "",
         i: "i",
         u: ""
     };
-    const url = "https://srsp-post-app.herokuapp.com/comments";
+
+    const url = "http://localhost:5000/comments";
     axios
     .post(url, messageBody)
     .then(displayComment);
@@ -62,10 +64,11 @@ let disableButton = () => {
     btnSend.setAttribute('disabled', '')
 };
 document.addEventListener('keyup', () => {
+    const username = document.querySelector('#username').value;
     const messages = document.querySelector("#comment").value;
-    if (messages !=="") {
+    if (messages !=="" && username !=="") {
         enableButton()
-        console.log(messages);
+        // console.log(messages);
     } else {
         disableButton();
     };
@@ -76,7 +79,7 @@ const btnSend = document.querySelector("#btnid");
 
 
 function loadMessage() {
-    const url = "https://srsp-post-app.herokuapp.com/comments";
+    const url = "http://localhost:5000/comments";
     axios.get(url).then(displayComment);
 };
 
