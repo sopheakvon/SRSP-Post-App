@@ -70,7 +70,7 @@ let icons = [
   {id: 10, icon: '🤬', sign: 'angry'},
 ];
 // GET emoji
-app.get("/emoji", (req, res) => {
+app.get("/icons", (req, res) => {
   res.send(icons);
 });
 
