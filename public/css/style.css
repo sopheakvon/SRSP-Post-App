@@ -1,15 +1,18 @@
 body {
-    background: #eec;
     font-family:  sans-serif;
+    background-image: url('https://wallup.net/wp-content/uploads/2019/10/438564-diamonds-diamond-jewelery-bokeh-bling-abstraction-abstract-sparkle.jpg');
+    background-size: cover;
 }
 
 img {
     width: 100%;
 }
+
 #bolder, #italic, #underline{
     font-weight: bolder;
     cursor: pointer;
 }
+
 #italic{
     font-style: italic;
     font-family: 'Times New Roman', Times, serif;
@@ -25,14 +28,11 @@ img {
 .b{
     font-weight: bolder;
 }
+
 .i{
     font-style: italic;
 }
+
 .u{
     text-decoration: underline;
 }
-
-
-
-
-

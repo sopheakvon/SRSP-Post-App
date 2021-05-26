@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SRSP POST APP</title>
+    <title>SRSP POST APP1</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/app.js" defer></script>
@@ -14,10 +15,14 @@
 </head>
 <body>
 
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">SRSP POST APP</a>
+    <form class="form-inline">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="signid">SIGN OUT</button>
+    </form>
+  </nav>
 
-<!-- Input message -->
-    <div class="container">
-
+    <div class="container mt-4">
       <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
@@ -29,11 +34,13 @@
           </div>
 
           <div class="post-comment">
+
             <div class="message">
               <ul></ul>
             </div>
             
           <div class="card">
+
             <div class="card-body">
               <div class="card-comment"></div>
             </div>
@@ -46,15 +53,16 @@
                   <span class="input-group-text" id="italic">I</span>
                   <span class="input-group-text" id="underline">U</span>
                 </div>
+
                 <input type="text" class="form-control" id="comment" placeholder="Comment....">
+                
                 <div class="input-group-append">
                   <button class="btn btn-success" type="submit" id="btnid" disabled>SEND</button>
                 </div>
+
               </div>
             </div>
-
           </div>
-
         </div>
           <div class="col-3"></div>
       </div>
