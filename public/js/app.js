@@ -149,18 +149,19 @@ function textstyles(e){
 };
 
 
-btnSend.addEventListener("click", sendMessage);
-const cardComment = document.querySelector(".card-comment");
-const textStyle = document.querySelector(".text-style");
-textStyle.addEventListener("click", textstyles);
-let fonts = {};
 
-let isLogined = sessionStorage.length > 0;
-if (isLogined){
-    setInterval(loadMessage, 1000);
-}else{
-    window.location.href = "http://localhost:5000/index.html";
-}
+// code icon
+let btnemoji = document.getElementById('emoji-btn');
+const picker = new EmojiButton();
+document.addEventListener('DOMContentLoaded', () => {
+    picker.on('emoji', emoji => {
+        document.querySelector('#comment').value += emoji;
+    });
+    btnemoji.addEventListener('click', () => {
+        picker.togglePicker(btnemoji);
+    });
+});
+
 
 
 
@@ -171,3 +172,22 @@ function signOut (){
 }
 const singOUT = document.querySelector("#signid");
 singOUT.addEventListener("click", signOut);
+
+
+
+// leak khan login ket jea minut
+let isLogined = sessionStorage.length > 0;
+if (isLogined){
+    setInterval(loadMessage, 1000);
+}else{
+    window.location.href = "http://localhost:5000/index.html";
+}
+
+
+
+btnSend.addEventListener("click", sendMessage);
+const cardComment = document.querySelector(".card-comment");
+const textStyle = document.querySelector(".text-style");
+textStyle.addEventListener("click", textstyles);
+let fonts = {};
+

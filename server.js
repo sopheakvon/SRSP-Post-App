@@ -12,7 +12,7 @@ let comments = [
     id: 1,
     username: "Sara",
     message: "Hello!! My name is Sara",
-    color: "alert-warning",
+    color: "alert-danger",
     b: "",
     i: "",
     u: "u",
@@ -22,11 +22,11 @@ let comments = [
     id: 2,
     username: "Sopheak",
     message: "Hello!! My name is Sopheak",
-    color: "alert-danger",
+    color: "alert-warning",
     b: "",
     i: "i",
     u: "",
-    profile: "image/pro4.png",
+    profile: "image/pro8.png",
   },
 ];
 app.post("/comments", (req, res) => {
@@ -57,29 +57,30 @@ app.get("/comments", (req, res) => {
 });
 
 
-let icons = [
-  {id: 1, icon: '😓', sign: '):'},
-  {id: 2, icon: '😄', sign: '(:'},
-  {id: 3, icon: '😭', sign: 'cry'},
-  {id: 4, icon: '🥰', sign: 'love'},
-  {id: 5, icon: '😷', sign: 'sick'},
-  {id: 6, icon: '😲', sign: 'wow'},
-  {id: 7, icon: '😤', sign: 'bore'},
-  {id: 8, icon: '🥱', sign: 'sleep'},
-  {id: 9, icon: '😋', sign: 'haha'},
-  {id: 10, icon: '🤬', sign: 'angry'},
-];
-// GET emoji
-app.get("/icons", (req, res) => {
-  res.send(icons);
-});
+// let icons = [
+//   {id: 1, icon: '😓', sign: '):'},
+//   {id: 2, icon: '😄', sign: '(:'},
+//   {id: 3, icon: '😭', sign: 'cry'},
+//   {id: 4, icon: '🥰', sign: 'love'},
+//   {id: 5, icon: '😷', sign: 'sick'},
+//   {id: 6, icon: '😲', sign: 'wow'},
+//   {id: 7, icon: '😤', sign: 'bore'},
+//   {id: 8, icon: '🥱', sign: 'sleep'},
+//   {id: 9, icon: '😋', sign: 'haha'},
+//   {id: 10, icon: '🤬', sign: 'angry'},
+// ];
+// // GET emoji
+// app.get("/icons", (req, res) => {
+//   res.send(icons);
+// });
 
 
 let users =[
-  {id: 1, username: "Sopheak", password: "111", color: "alert-warning", profile: "image/pro4.png"},
+  {id: 1, username: "Sopheak", password: "111", color: "alert-warning", profile: "image/pro8.png"},
   {id: 2, username: "Rady", password: "222", color: "alert-success", profile: "image/pro2.png"},
-  {id: 3, username: "Sara", password: "333", color: "alert-dark", profile: "image/pro3.png"},
-  {id: 4, username: "Chandy", password: "444", color: "alert-info", profile: "image/pro1.png"}
+  {id: 3, username: "Sara", password: "333", color: "alert-danger", profile: "image/pro3.png"},
+  {id: 4, username: "Chandy", password: "444", color: "alert-info", profile: "image/pro1.png"},
+  {id: 5, username: "Ronan", password: "555", color: "alert-dark", profile: "image/pro13.png"}
 ];
 // get users
 app.get('/users', (req, res) =>{
