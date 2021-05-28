@@ -57,24 +57,6 @@ app.get("/comments", (req, res) => {
 });
 
 
-// let icons = [
-//   {id: 1, icon: '😓', sign: '):'},
-//   {id: 2, icon: '😄', sign: '(:'},
-//   {id: 3, icon: '😭', sign: 'cry'},
-//   {id: 4, icon: '🥰', sign: 'love'},
-//   {id: 5, icon: '😷', sign: 'sick'},
-//   {id: 6, icon: '😲', sign: 'wow'},
-//   {id: 7, icon: '😤', sign: 'bore'},
-//   {id: 8, icon: '🥱', sign: 'sleep'},
-//   {id: 9, icon: '😋', sign: 'haha'},
-//   {id: 10, icon: '🤬', sign: 'angry'},
-// ];
-// // GET emoji
-// app.get("/icons", (req, res) => {
-//   res.send(icons);
-// });
-
-
 let users =[
   {id: 1, username: "Sopheak", password: "111", color: "alert-warning", profile: "image/pro8.png"},
   {id: 2, username: "Rady", password: "222", color: "alert-success", profile: "image/pro2.png"},

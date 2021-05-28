@@ -32,6 +32,9 @@ function messageModal(user, mes, color, b, i, u, profile) {
     cardComment.appendChild(sms);
 };
 
+
+
+
 function displayComment(response) {
 
     let comments = response.data;
@@ -65,7 +68,6 @@ function sendMessage() {
 
     const url = "http://localhost:5000/comments";
     // const url = "https://srsp-post-app.herokuapp.com/comments";
-
     axios
     .post(url, messageBody)
     .then(displayComment);
@@ -147,20 +149,6 @@ function textstyles(e){
     }
     fonts = { b: b, i: i, u: u}
 };
-
-
-
-// code icon
-let btnemoji = document.getElementById('emoji-btn');
-const picker = new EmojiButton();
-document.addEventListener('DOMContentLoaded', () => {
-    picker.on('emoji', emoji => {
-        document.querySelector('#comment').value += emoji;
-    });
-    btnemoji.addEventListener('click', () => {
-        picker.togglePicker(btnemoji);
-    });
-});
 
 
 
