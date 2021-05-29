@@ -35,18 +35,21 @@ function login(response, userName, password){
             localStorage.setItem("color", user.color);
             localStorage.setItem("profile", user.profile);
             sessionStorage.setItem("login", user.username);
+            // sessionStorge 
         };
     };
 
     if(counterFailLogin>5){
-        window.location.href = "http://localhost:5000/404.html";
+        // window.location.href = "http://localhost:5000/404.html";
+        window.location.href = "https://srsp-post-app.herokuapp.com/404.html";
     }
     
     if(isLogin){
         displayMessage("alert-success", " Login Success", " Welcome!!");
         setTimeout(()=> {
             //link comment show result of commnet 
-            window.location.href = "http://localhost:5000/comment.html"
+            // window.location.href = "http://localhost:5000/comment.html"
+            window.location.href = "https://srsp-post-app.herokuapp.com/comment.html";
         }, 2000);
         
     }else{
@@ -60,13 +63,13 @@ function inputUser(){
     const user = document.querySelector('#user').value;
     const pass = document.querySelector("#pwd").value;
 
-    // const url = "https://srsp-post-app.herokuapp.com/users";
-    const url = "http://localhost:5000/users";
+    const url = "https://srsp-post-app.herokuapp.com/users";
+    // const url = "http://localhost:5000/users";
     axios
     .get(url)
     .then(res=> login(res, user, pass))
     };
-
+// res jea data chab yuk pi server
 
 const btnLogin = document.querySelector('#btn-login');
 btnLogin.addEventListener('click', inputUser);
@@ -77,5 +80,6 @@ let col6 = document.querySelector('.col-6');
 // pil deal input username and password alredy can't resresh
 let isLogined = sessionStorage.length > 0;
 if (isLogined){
-    window.location.href = "http://localhost:5000/comment.html";
+    // window.location.href = "http://localhost:5000/comment.html";
+    window.location.href = "https://srsp-post-app.herokuapp.com/comment.html";
 }

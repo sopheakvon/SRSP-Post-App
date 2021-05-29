@@ -1,4 +1,5 @@
 function messageModal(user, mes, color, b, i, u, profile) {
+    // tver oy div jenh mk mean color
     const sms = document.createElement("div");
     sms.classList.add("alert");
     sms.classList.add(color);
@@ -42,6 +43,7 @@ function displayComment(response) {
     for (let message of removemessage) {
         message.remove();
     };
+
     for (let comment of comments) {
         messageModal(comment.username, comment.message, comment.color, comment.b, comment.i, comment.u, comment.profile);
     };
@@ -53,8 +55,10 @@ function sendMessage() {
 
     const messages = document.querySelector("#comment").value;
     let user = localStorage.getItem("username");
+    //get color mk pi local store 
     let color = localStorage.getItem("color");
     let profile = localStorage.getItem("profile");
+
     let messageBody = {
         username:user,
         message: messages,
@@ -66,8 +70,8 @@ function sendMessage() {
         
     };
 
-    const url = "http://localhost:5000/comments";
-    // const url = "https://srsp-post-app.herokuapp.com/comments";
+    // const url = "http://localhost:5000/comments";
+    const url = "https://srsp-post-app.herokuapp.com/comments";
     axios
     .post(url, messageBody)
     .then(displayComment);
@@ -84,13 +88,15 @@ let disableButton = () => {
 };
 
 
+// input word user keyup 
 document.addEventListener('keyup', () => {
 
     const messages = document.querySelector("#comment").value;
     if (messages !=="") {
+        // open
         enableButton()
-        console.log(messages);
     } else {
+        // off 
         disableButton();
     };
 
@@ -98,10 +104,11 @@ document.addEventListener('keyup', () => {
 const btnSend = document.querySelector("#btnid");
 
 
+
 function loadMessage() {
 
-    const url = "http://localhost:5000/comments";
-    // const url = "https://srsp-post-app.herokuapp.com/comments";
+    // const url = "http://localhost:5000/comments";
+    const url = "https://srsp-post-app.herokuapp.com/comments";
     axios
     .get(url)
     .then(displayComment)
@@ -127,7 +134,7 @@ function textstyles(e){
     };
 
 
-
+// click jom bolder yg ng jam yuk bottun dea store 
 
     if (e.target.id === "bolder" && e.target.className === "input-group-text activer") {
         b = bolder.textContent.toLowerCase();
@@ -156,7 +163,9 @@ function textstyles(e){
 // signout comeback to input username and password
 function signOut (){
     sessionStorage.clear();
-    window.location.href = "http://localhost:5000/index.html";
+    // window.location.href = "http://localhost:5000/index.html";
+    window.location.href = "https://srsp-post-app.herokuapp.com/index.html";
+    
 }
 const singOUT = document.querySelector("#signid");
 singOUT.addEventListener("click", signOut);
@@ -168,7 +177,8 @@ let isLogined = sessionStorage.length > 0;
 if (isLogined){
     setInterval(loadMessage, 1000);
 }else{
-    window.location.href = "http://localhost:5000/index.html";
+    // window.location.href = "http://localhost:5000/index.html";
+    window.location.href = "https://srsp-post-app.herokuapp.com/index.html";
 }
 
 
@@ -177,5 +187,6 @@ btnSend.addEventListener("click", sendMessage);
 const cardComment = document.querySelector(".card-comment");
 const textStyle = document.querySelector(".text-style");
 textStyle.addEventListener("click", textstyles);
+// tok store bolder and italick underline
 let fonts = {};
 
