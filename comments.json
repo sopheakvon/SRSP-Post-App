@@ -18,59 +18,5 @@
     "i": "i",
     "u": "",
     "profile": "image/pro8.png"
-  },
-  {
-    "id": 3,
-    "username": "Sopheak",
-    "message": "fsfsdsd",
-    "color": "alert-warning",
-    "profile": "image/pro8.png"
-  },
-  {
-    "id": 4,
-    "username": "Sopheak",
-    "message": "fsfdds",
-    "color": "alert-warning",
-    "b": "",
-    "i": "i",
-    "u": "",
-    "profile": "image/pro8.png"
-  },
-  {
-    "id": 5,
-    "username": "Rady",
-    "message": "hello student",
-    "color": "alert-success",
-    "b": "b",
-    "i": "",
-    "u": "",
-    "profile": "image/pro2.png"
-  },
-  {
-    "id": 6,
-    "username": "Rady",
-    "message": "fkjsfll",
-    "color": "alert-success",
-    "b": "",
-    "i": "",
-    "u": "u",
-    "profile": "image/pro2.png"
-  },
-  {
-    "id": 7,
-    "username": "Rady",
-    "message": "fdffsd",
-    "color": "alert-success",
-    "profile": "image/pro2.png"
-  },
-  {
-    "id": 8,
-    "username": "Rady",
-    "message": "yaya",
-    "color": "alert-success",
-    "b": "",
-    "i": "",
-    "u": "u",
-    "profile": "image/pro2.png"
   }
 ]
